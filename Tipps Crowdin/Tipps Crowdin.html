@@ -1,0 +1,700 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Tipps</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="57037c66-3e80-4fca-a7be-8684610755e6" class="page sans"><header><img class="page-cover-image" src="Tipps%20f261f/freeCodeCamp_Banner.png" style="object-position:center 50%"/><h1 class="page-title">Tipps</h1></header><div class="page-body"><hr id="af4786b1-432a-4353-8e60-44f14596c6ef"/><div id="d6bd9f1d-cb7c-4438-9ff2-79b12d332ca6" class="column-list"><div id="2cfbfc86-702c-4812-a981-00fa7c84d3f6" style="width:33.33333333333333%" class="column"><p id="d0398cf7-0cda-4588-a23d-140e9efe3496" class="">
+</p></div><div id="9d364a98-97ca-4eef-ae44-dfaaeb28ec7d" style="width:33.333333333333336%" class="column"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="f69478c2-f89b-4645-8fa8-4087c484021a"><div style="font-size:1.5em"><span class="icon">🏠</span></div><div style="width:100%"><a href="https://www.notion.so/freeCodeCamp-fd72ff7f71ef414baf14df870986dabc">zur Startseite</a></div></figure></div><div id="9f01edd4-9112-4211-bf5f-bacab580d866" style="width:33.333333333333336%" class="column"><p id="d617068d-2983-4e04-8401-dededda8e44b" class="">
+</p></div></div><hr id="eb09af96-9ce7-415a-a6a2-93ba148e7a16"/><p id="ca57dd16-334d-43c8-a6f5-f93f600af3e1" class="">
+</p><p id="65fecbc5-bdfe-43ee-b3c6-c0e44a8e0410" class=""><strong>Inhaltsverzeichnis</strong></p><nav id="b0746b96-3622-4d9d-af56-2f96d4ceb804" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#276613c6-0024-43d7-858d-23cfc394d3a2">Anzeigen von Code-Tags</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4a522988-4c47-47e2-9c72-bbbd24b2bc97">Keine &quot;Dokumentationsstrings&quot; übersetzen</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#7b6c5f43-287c-4e28-ae6e-7b246dde341e">Übersetzungsvorschlägen für einen Begriff anzeigen</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6b378362-1f93-4ab6-ba0b-bcaab2f6bb9c">Vorherige Übersetzungen eines Begriffes anzeigen</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#65f01868-2dc0-4355-b6ed-459e308600a4">Ansicht verändern</a></div></nav><h2 id="276613c6-0024-43d7-858d-23cfc394d3a2" class="block-color-yellow_background">Anzeigen von Code-Tags</h2><p id="e8992933-7ffb-4024-b243-e820e2145411" class="">
+Klicke in der Editoransicht auf das Einstellungssymbol (dargestellt als Zahnrad). Ändere in dem nun geöffneten Fenster die Einstellung &#x27;<strong>HTML tags displaying</strong>&#x27; auf &#x27;<strong>SHOW</strong>&#x27;. </p><figure id="f261f653-b178-4e99-876b-6217d54a03d2" class="image"><a href="Tipps%20f261f/GIF-Einstellung-Code-Tags-anzeigen.gif"><img style="width:800px" src="Tipps%20f261f/GIF-Einstellung-Code-Tags-anzeigen.gif"/></a></figure><p id="8124cbf5-7e58-4779-91eb-ee5f6a7dbfd7" class="">
+</p><p id="ec817aff-2fb5-44ad-bc2b-5af45d7a5f1e" class="">Dadurch wird sichergestellt, dass du Tags wie &lt;code&gt;&lt;/code&gt; statt &lt;0&gt;&lt;/0&gt; sehen kannst.
+</p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="08d8cefe-0508-417a-99a2-17cfd997b33e"><div style="font-size:1.5em"><span class="icon">⚠️</span></div><div style="width:100%">Der Inhalt von Code-Tags darf nicht übersetzt werden. Dies würde zu Fehlern bei den automatisierten Tests führen.</div></figure><p id="69df971d-9d94-4c97-bb4b-d852bddbb697" class="">
+</p><h2 id="4a522988-4c47-47e2-9c72-bbbd24b2bc97" class="block-color-yellow_background">Keine &quot;Dokumentationsstrings&quot; übersetzen</h2><p id="dc917e26-8687-4568-a029-85c6cffd86ae" class="">
+</p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="c0721534-fd41-4a50-8ed0-48a50f3592c6"><div style="font-size:1.5em"><span class="icon">⚠️</span></div><div style="width:100%">Strings wie <strong>[!NOTE]</strong>, <strong>[!WARNING]</strong>oder <strong>[!TIP]</strong> dürfen nicht übersetzt werden.</div></figure><p id="426ea6ac-a648-4d14-9025-f1ceb21b978e" class="">
+</p><figure id="4b339161-620a-4572-a16f-c4f2bb9049a8" class="image"><a href="Tipps%20f261f/Untitled.png"><img style="width:1300px" src="Tipps%20f261f/Untitled.png"/></a></figure><p id="ea014c97-6daf-448f-afc2-4338cc8f097c" class="">
+freeCodeCamp verwendet docsify, um die Seiten für die Dokumentation (z.B. dem Moderatorenhandbuch) zu erstellen. Die oben genannten Strings sind Schlüsselwörter und werden für die automatische Erstellung von Nachrichtenboxen innerhalb der Dokumentation benötigt. 
+
+Hier die generierte Nachrichtenbox zum obigen String.</p><figure id="e1df3482-a8b6-4e1e-91a7-b585f7222de1" class="image"><a href="Tipps%20f261f/Untitled%201.png"><img style="width:2162px" src="Tipps%20f261f/Untitled%201.png"/></a></figure><p id="43ab6f85-9f88-4ebb-8047-16cb86916092" class="">Werden diese Strings fälschlicherweise übersetzt, führt dies bei der Erstellung der Dokumentationsseiten zu Fehlern.</p><h2 id="7b6c5f43-287c-4e28-ae6e-7b246dde341e" class="block-color-yellow_background">Übersetzungsvorschlägen für einen Begriff anzeigen</h2><p id="dc7f8f8b-f285-4602-becd-9f668ca521ea" class="">
+Crowdin stellt einige kleine Hilfen für die Übersetzung zur Verfügung. Dazu zählt unter anderem die Möglichkeit sich eine Übersetzung bestimmter Begriffe anzeigen zu lassen. Diese können von der Community gepflegt werden.
+
+Das es für einen Begriff einen Übersetzungsvorschlag gibt, erkennst du daran, dass er mit einer dunkelgrauen, gestrichelten Linie unterstrichen ist. Um den Vorschlag anzuzeigen, musst du lediglich mit dem Mauszeiger darüber fahren.</p><p id="9000a512-a506-465a-96f6-053b91430603" class="">
+</p><figure id="ff47427b-fdce-457e-9740-07ebf842e0eb" class="image"><a href="Tipps%20f261f/GIF_Anzeigen_Uebersetzungsvorschlag.gif"><img style="width:800px" src="Tipps%20f261f/GIF_Anzeigen_Uebersetzungsvorschlag.gif"/></a></figure><h2 id="6b378362-1f93-4ab6-ba0b-bcaab2f6bb9c" class="block-color-yellow_background">Vorherige Übersetzungen eines Begriffes anzeigen</h2><p id="0305c9ff-b5bf-43ef-9337-e7315f3116cc" class="">
+Sofern Begriffe mit einer hellgrauen, gestrichelten Linie unterstrichen sind, kann eine Zusammenfassung zu vorherigen Übersetzungen dieses Begriffes angezeigt werden. Um die Zusammenfassung anzuzeigen, musst du lediglich mit dem Mauszeiger darüber fahren.</p><figure id="da7c6dca-2b71-42a5-988a-0e8a189d4503" class="image"><a href="Tipps%20f261f/GIF_Anzeigen_fruehere_Uebersetzungen.gif"><img style="width:800px" src="Tipps%20f261f/GIF_Anzeigen_fruehere_Uebersetzungen.gif"/></a></figure><p id="29fe6a58-36f1-4637-9a79-fd6a5f5c6e1d" class="">Dies kann eine zusätzliche Entscheidungshilfe sein. Jedoch ist insbesondere bei Begriffen, die auch Teil von Code-Tags sein können, Vorsicht geboten. Wie bereits oben aufgeführt, dürfen Code-Tags nicht übersetzt werden. Daher kann eine Zusammenfassung natürlich auch die häufig nicht erfolgte Übersetzung dieses englischen Begriffs anzeigen.</p><p id="4488af9c-875b-4910-8967-f18f372f634d" class="">
+</p><h2 id="65f01868-2dc0-4355-b6ed-459e308600a4" class="block-color-yellow_background">Ansicht verändern</h2><p id="0f109118-deed-4dcb-84f7-5bff09ab4087" class="">
+Standardmäßig wird in Crowdin die Listenansicht für die einzelnen zu übersetzenden Strings angezeigt. Es gibt jedoch die Möglichkeit, die Ansicht zu ändern. Im linken Fenster neben der Suchleiste gibt es drei Symbole. Mithilfe des Symbols ganz links (welches wie eine Liste aussieht) kannst du die Ansicht umschalten. Wenn du mit dem Mauszeiger darüber fährst, erscheint der Hinweis &quot;Switch to WYSIWYG translation mode&quot;.
+
+Durch Klick auf dieses Symbol wird auf die WYSIWYG(&quot;What You See Is What You Get&quot;)-Ansicht umgestellt. Nun kannst du die Datei als Ganzes betrachten. Ich persönlich finde diese Ansicht hilfreicher, da nun der Kontext in dem der zu übersetzende String steht, erkennbar ist. 
+</p><figure id="a172ebad-fce8-4aa5-9e48-69d791967178" class="image"><a href="Tipps%20f261f/GIF_WYSIWYG-Ansicht.gif"><img style="width:800px" src="Tipps%20f261f/GIF_WYSIWYG-Ansicht.gif"/></a></figure><p id="e9c3310c-4495-44ea-ae9d-5f2dd5b9b4bb" class="">
+</p><p id="bf242328-9b1f-4b19-8fbf-3091a2fdc772" class="">Mit dem Stiftsymbol kannst du zusätzlich farbliche Markierungen aktivieren bzw. deaktivieren. Der aktuell ausgewählte String wird grundsätzlich <strong>gelb</strong> markiert. Übersetzte bzw. geprüfte Strings werden <strong>grün</strong> markiert. Nicht bearbeitete Strings haben keine Markierung.</p><p id="97d0abd9-5692-4a41-8866-81e1ffe95d32" class="">
+</p><figure id="fb99eb82-8b77-47ed-815f-6dc51afca851" class="image"><a href="Tipps%20f261f/GIF_Hightlight-Ansicht.gif"><img style="width:800px" src="Tipps%20f261f/GIF_Hightlight-Ansicht.gif"/></a></figure><p id="b3a1cee9-46a9-4798-9fc6-44a67b708f2f" class="">
+</p><p id="cdf51dcd-3656-43e9-a522-ff0bd2f80747" class="">Mit dem Augensymbol kannst du zusätzlich zwischen der Originaldatei (englisch) und der übersetzten Datei wechseln.</p><p id="2a93a2a3-6999-4564-b7e0-bf274814ae71" class="">
+</p><figure id="618d9794-f673-4665-bbe6-7d1bcf5182ae" class="image"><a href="Tipps%20f261f/GIF-Preview-Ansicht.gif"><img style="width:800px" src="Tipps%20f261f/GIF-Preview-Ansicht.gif"/></a></figure><p id="bb09b520-b9f0-4302-bde4-de61d7e2747a" class="">
+</p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="4f9dc21d-8fd2-47e1-b722-771627eb17d0"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Solltest du Fragen bzw. Anregungen haben, kannst du mir diese gern per E-Mail an <a href="mailto:freeCodeCamp@gmx.de"><strong>freeCodeCamp@gmx.de</strong></a> mitteilen.</div></figure><p id="aa24022d-32cb-4eb1-affc-64398d6d0d2f" class="">
+</p><hr id="c4e9d510-883e-4856-8590-720f3d8981ae"/><div id="d12e33aa-13ea-4461-ac06-e6acdd1f603e" class="column-list"><div id="d5977db6-050b-43dc-b5a1-1f8a4acfde5a" style="width:33.333333333333336%" class="column"><p id="75ada99e-a955-426b-bceb-96d959868aba" class="">
+</p></div><div id="4f173be9-ec4d-4633-bbe1-ab9ab6948be2" style="width:33.333333333333336%" class="column"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="ef3e61f3-6136-4b02-a669-78749823272b"><div style="font-size:1.5em"><span class="icon">🏠</span></div><div style="width:100%"><a href="https://www.notion.so/freeCodeCamp-fd72ff7f71ef414baf14df870986dabc">zur Startseite</a></div></figure></div><div id="c9904a72-d916-47c0-ab0c-9da39d74cf21" style="width:33.33333333333333%" class="column"></div></div><hr id="d9b5a87c-e007-4e10-8a53-8db76ae458a5"/><p id="f84a0470-d964-4725-9c6c-30c049bbfa33" class="">
+</p><p id="50a37309-1438-4021-9234-934bc19de374" class="">
+</p></div></article></body></html>
